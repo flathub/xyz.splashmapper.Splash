@@ -124,8 +124,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-mtl/tools/splash/splash.git",
-                    "tag": "0.9.36",
-                    "commit": "1b079ab247cd93e017e3da777fbecaaf80d97678"
+                    "tag": "0.9.38",
+                    "commit": "6ebc7e2a496d0b233d8741ce0a328eba1b1042d4"
                 }
             ]
         }
