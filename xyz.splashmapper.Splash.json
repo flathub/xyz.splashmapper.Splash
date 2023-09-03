@@ -118,14 +118,15 @@
             "name": "splash",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DBUILD_GENERIC_ARCH=ON"
+                "-DBUILD_GENERIC_ARCH=ON",
+                "-DWITH_LTO=ON"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-mtl/tools/splash/splash.git",
-                    "tag": "0.9.36",
-                    "commit": "1b079ab247cd93e017e3da777fbecaaf80d97678"
+                    "tag": "0.9.38",
+                    "commit": "7707989aa147993b7d14f0936b4764c0f0e50fc0"
                 }
             ]
         }
