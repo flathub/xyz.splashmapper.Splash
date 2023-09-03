@@ -118,7 +118,8 @@
             "name": "splash",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DBUILD_GENERIC_ARCH=ON"
+                "-DBUILD_GENERIC_ARCH=ON",
+                "-DWITH_LTO=ON"
             ],
             "sources": [
                 {
