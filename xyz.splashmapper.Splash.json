@@ -97,6 +97,24 @@
             ]
         },
         {
+            "name": "zmq",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [
+                "-DWITH_LIBSODIUM=OFF",
+                "-DWITH_TLS=OFF",
+                "-DENABLE_WS=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/zeromq/libzmq.git",
+                    "tag": "v4.3.4",
+                    "commit": "4097855ddaaa65ed7b5e8cb86d143842a594eebd"
+                }
+            ]
+        },
+        {
             "name": "splash",
             "buildsystem": "cmake-ninja",
             "config-opts": [
