@@ -91,8 +91,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-mtl/tools/shmdata.git",
-                    "tag": "1.3.68",
-                    "commit": "66513e5fef0a6fdad986455370a80f272f1745c2"
+                    "tag": "1.3.72",
+                    "commit": "96e044d1c6330e5fc9993cda2abc695a1dbc656e"
                 }
             ]
         },
@@ -125,8 +125,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-mtl/tools/splash/splash.git",
-                    "tag": "0.9.38",
-                    "commit": "7707989aa147993b7d14f0936b4764c0f0e50fc0"
+                    "tag": "0.9.40",
+                    "commit": "7e6a9aaa71f9405839b2b1948a7079442865c2d5"
                 }
             ]
         }
