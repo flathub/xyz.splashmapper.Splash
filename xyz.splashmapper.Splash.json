@@ -126,7 +126,9 @@
                     "type": "git",
                     "url": "https://gitlab.com/splashmapper/splash.git",
                     "tag": "0.10.0",
-                    "commit": "600ad9ce48700f14b79de63284e3725e4f4c05ed"
+                    "commit": "600ad9ce48700f14b79de63284e3725e4f4c05ed",
+                    "disable-shallow-clone": true,
+                    "disable-fsckobjects": true
                 }
             ]
         }
