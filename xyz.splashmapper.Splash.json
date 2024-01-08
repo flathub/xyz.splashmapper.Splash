@@ -127,7 +127,7 @@
                     "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.10.4/raw/splash.tar.gz?job=package%3Afullsources",
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
-                    "sha256": "a3449474d519b67a9eacd905c081eb6570b45ce6f809fba4ecb1bc142eb73897"
+                    "sha256": "adcc19ff7405df8370616067767a03633b1bea1215b92c6a8c26bbdfe976edca"
                 }
             ]
         }
