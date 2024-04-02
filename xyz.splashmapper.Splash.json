@@ -1,7 +1,7 @@
 {
     "app-id": "xyz.splashmapper.Splash",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "splash",
     "rename-desktop-file": "splash.desktop",
@@ -38,8 +38,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/opencv/opencv.git",
-                    "tag": "4.6.0",
-                    "commit": "b0dc474160e389b9c9045da5db49d03ae17c6a6b"
+                    "tag": "4.7.0",
+                    "commit": "725e440d278aca07d35a5e8963ef990572b07316"
                 }
             ]
         },
@@ -109,8 +109,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/zeromq/libzmq.git",
-                    "tag": "v4.3.4",
-                    "commit": "4097855ddaaa65ed7b5e8cb86d143842a594eebd"
+                    "tag": "v4.3.5",
+                    "commit": "622fc6dde99ee172ebaa9c8628d85a7a1995a21d"
                 }
             ]
         },
@@ -124,10 +124,10 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.10.8/raw/splash.tar.gz?job=package%3Afullsources",
+                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/6530773502/artifacts/raw/splash.tar.gz?inline=false",
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
-                    "sha256": "3f57e268b47ad8b6b1dccaefc7649617a2bb1064af066d6340ae3522cfbdaf5d"
+                    "sha256": "5200e1c073eb596c9a6b807218dd67de3fc3c92830098e4c404c789d813b2e1a"
                 }
             ]
         }
