@@ -49,7 +49,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://git.assembla.com/portaudio.git",
+                    "url": "https://github.com/PortAudio/portaudio.git",
                     "tag": "pa_stable_v190600_20161030",
                     "commit": "396fe4b6699ae929d3a685b3ef8a7e97396139a4"
                 }
@@ -124,10 +124,10 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.10.10/raw/splash.tar.gz?job=package%3Afullsources",
+                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.10.12/raw/splash.tar.gz?job=package%3Afullsources",
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
-                    "sha256": "5200e1c073eb596c9a6b807218dd67de3fc3c92830098e4c404c789d813b2e1a"
+                    "sha256": "71dd609fa4f1ed97cfaa24189cd2884bc8a0c70e228d21065576773920e996a1"
                 }
             ]
         }
