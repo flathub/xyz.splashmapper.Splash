@@ -39,8 +39,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/opencv/opencv.git",
-                    "tag": "4.7.0",
-                    "commit": "725e440d278aca07d35a5e8963ef990572b07316"
+                    "tag": "4.10.0",
+                    "commit": "71d3237a093b60a27601c20e9ee6c3e52154e8b1"
                 }
             ]
         },
