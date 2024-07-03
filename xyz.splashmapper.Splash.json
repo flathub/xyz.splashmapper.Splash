@@ -8,6 +8,7 @@
     "rename-icon": "splash",
     "finish-args": [
         "--socket=x11",
+        "--socket=wayland",
         "--socket=pulseaudio",
         "--share=ipc",
         "--device=all",
@@ -27,6 +28,7 @@
     "modules": [
         {
             "name": "opencv",
+            "disabled": true,
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": [
@@ -38,8 +40,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/opencv/opencv.git",
-                    "tag": "4.7.0",
-                    "commit": "725e440d278aca07d35a5e8963ef990572b07316"
+                    "tag": "4.10.0",
+                    "commit": "71d3237a093b60a27601c20e9ee6c3e52154e8b1"
                 }
             ]
         },
@@ -124,10 +126,10 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.10.12/raw/splash.tar.gz?job=package%3Afullsources",
+                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.10.14/raw/splash.tar.gz?job=package%3Afullsources",
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
-                    "sha256": "780460eaed960373b6069c90c27f6ca86101ea1258d139057bb62fd1b7cd9efd"
+                    "sha256": "43344fc6b568ed9f84835c2aa72f37b9ea7069973a79926dcb6a0e8048ffca66"
                 }
             ]
         }
