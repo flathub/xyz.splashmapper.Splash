@@ -28,7 +28,8 @@
     "modules": [
         {
             "name": "opencv",
-            "buildsystem": "cmake",
+            "disabled": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": [
                 "-DBUILD_PERF_TEST=OFF",
