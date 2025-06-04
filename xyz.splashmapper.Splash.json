@@ -3,7 +3,7 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
-    "command": "splash",
+    "command": "splash.sh",
     "rename-desktop-file": "splash.desktop",
     "rename-icon": "splash",
     "finish-args": [
@@ -14,18 +14,21 @@
         "--share=network",
         "--device=all",
         "--filesystem=host",
-        "--filesystem=xdg-run/pipewire-0"
+        "--filesystem=xdg-run/pipewire-0",
+        "--system-talk-name=org.freedesktop.Avahi"
     ],
     "cleanup": [
-        "/bin/gsl_*",
-        "/bin/opencv_*",
+        "/bin/gsl*",
+        "/bin/opencv*",
+        "/bin/sd*",
         "/include",
         "/share/OpenCV",
         "/share/info",
         "/share/man",
-        "*.a",
-        "*.la",
-        "*.cmake"
+        "/lib/pkgconfig",
+        "/lib/*.a",
+        "/lib/*.la",
+        "/lib/cmake"
     ],
     "modules": [
         {
@@ -119,6 +122,91 @@
             ]
         },
         {
+            "name": "avahi",
+            "cleanup": [
+                "/bin",
+                "/include",
+                "/lib/avahi",
+                "/lib/pkgconfig",
+                "/lib/*.a",
+                "/lib/*.la",
+                "/share/applications/*.desktop",
+                "/share/avahi",
+                "/share/man"
+            ],
+            "config-opts": [
+                "--with-distro=none",
+                "--disable-introspection",
+                "--disable-qt3",
+                "--disable-qt4",
+                "--disable-qt5",
+                "--disable-gtk",
+                "--disable-gtk3",
+                "--disable-core-docs",
+                "--disable-manpages",
+                "--disable-libdaemon",
+                "--disable-libevent",
+                "--disable-python",
+                "--disable-pygobject",
+                "--disable-mono",
+                "--disable-monodoc",
+                "--disable-autoipd",
+                "--disable-doxygen-doc",
+                "--disable-doxygen-dot",
+                "--disable-doxygen-xml",
+                "--disable-doxygen-html",
+                "--disable-manpages",
+                "--disable-xmltoman"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.avahi.org/download/avahi-0.8.tar.gz",
+                    "sha256": "060309d7a333d38d951bc27598c677af1796934dbd98e1024e7ad8de798fedda",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 147,
+                        "url-template": "https://www.avahi.org/download/avahi-$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libndi",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -D apply_extra ${FLATPAK_DEST}/bin/apply_extra"
+            ],
+            "sources": [
+                {
+                    "type": "extra-data",
+                    "filename": "Install_NDI_SDK_v6_Linux.tar.gz",
+                    "url": "https://downloads.ndi.tv/SDK/NDI_SDK_Linux/Install_NDI_SDK_v6_Linux.tar.gz",
+                    "sha256": "d74a71bc72d86d0d69dcd2924c2d48dd800590f6d84827a75d3116ba4ab2e536",
+                    "size": 60175936,
+                    "installed-size": 31634769
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "apply_extra",
+                    "commands": [
+                        "bsdtar -xf Install_NDI_SDK_v6_Linux.tar.gz",
+                        "_target_line=\"$(sed -n '/^__NDI_ARCHIVE_BEGIN__$/=' Install_NDI_SDK_v6_Linux.sh)\"",
+                        "_target_line=\"$((_target_line + 1))\"",
+                        "tail -n +\"$_target_line\" Install_NDI_SDK_v6_Linux.sh | tar -zxf - \"NDI SDK for Linux/lib/x86_64-linux-gnu/\" \"NDI SDK for Linux/lib/aarch64-rpi4-linux-gnueabi/\" \"NDI SDK for Linux/NDI SDK License Agreement.txt\" \"NDI SDK for Linux/licenses/libndi_licenses.txt\"",
+                        "install -D -m755 \"NDI SDK for Linux/lib/x86_64-linux-gnu/libndi.so.6\".*.* -t ./lib",
+                        "install -D -m644 \"NDI SDK for Linux/NDI SDK License Agreement.txt\" -t ./share/licenses",
+                        "install -D -m644 \"NDI SDK for Linux/licenses/libndi_licenses.txt\" -t ./share/licenses",
+                        "rm -rf \"NDI SDK for Linux\"",
+                        "rm -f Install_NDI_SDK_v6_Linux.*",
+                        "cd ./lib",
+                        "ln -s libndi.so.6.*.* libndi.so.6",
+                        "ln -s libndi.so.6.*.* libndi.so"
+                    ]
+                }
+            ]
+        },
+        {
             "name": "splash",
             "buildsystem": "cmake-ninja",
             "config-opts": [
@@ -132,6 +220,19 @@
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
                     "sha256": "12f3022edd09d7d2a2c246f787cb5f470103511452c67244c67a7e2ff7d7f877"
+                }
+            ]
+        },
+        {
+            "name": "splash-script",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -D splash.sh ${FLATPAK_DEST}/bin/splash.sh"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "splash.sh"
                 }
             ]
         }
