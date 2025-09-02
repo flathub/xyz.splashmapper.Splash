@@ -53,6 +53,7 @@
         {
             "name": "portaudio",
             "buildsystem": "cmake-ninja",
+            "builddir": true,
             "sources": [
                 {
                     "type": "git",
@@ -71,26 +72,28 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://mirror.ibcp.fr/pub/gnu/gsl/gsl-2.5.tar.gz",
-                    "sha256": "0460ad7c2542caaddc6729762952d345374784100223995eb14d614861f2258d"
+                    "url": "https://mirror.ibcp.fr/pub/gnu/gsl/gsl-2.7.1.tar.gz",
+                    "sha256": "dcb0fbd43048832b757ff9942691a8dd70026d5da0ff85601e52687f6deeb34b"
                 }
             ]
         },
         {
             "name": "jsoncpp",
             "buildsystem": "cmake-ninja",
+            "builddir": true,
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/open-source-parsers/jsoncpp",
-                    "tag": "1.8.4",
-                    "commit": "ddabf50f72cf369bf652a95c4d9fe31a1865a781"
+                    "tag": "1.9.5",
+                    "commit": "5defb4ed1a4293b8e2bf641e16b156fb9de498cc"
                 }
             ]
         },
         {
             "name": "shmdata",
             "buildsystem": "cmake-ninja",
+            "builddir": true,
             "config-opts": [
                 "-DWITH_PYTHON=OFF"
             ],
@@ -209,6 +212,7 @@
         {
             "name": "splash",
             "buildsystem": "cmake-ninja",
+            "builddir": true,
             "config-opts": [
                 "-DBUILD_GENERIC_ARCH=ON",
                 "-DWITH_LTO=ON"
@@ -216,10 +220,10 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.11.6/raw/splash.tar.gz?job=package%3Afullsources",
+                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.11.8/raw/splash.tar.gz?job=package%3Afullsources",
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
-                    "sha256": "907eaea5494f6e7c3c87c35ce448994a1033442c7e5a5c7af9b2d740d839ff4d"
+                    "sha256": "b61569546a87849cafc7a24a98ced71c376a916d1dfd9bfd9b017fad49c4f4d3"
                 }
             ]
         },
