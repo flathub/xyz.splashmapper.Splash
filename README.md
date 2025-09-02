@@ -12,7 +12,7 @@ To build Splash package manually:
 # Install dependencies
 sudo apt install -y flatpak-builder
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08
+flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//23.08
 
 # Build the package
 flatpak-builder --ccache --repo=flatpak_repo build --force-clean xyz.splashmapper.Splash.json
