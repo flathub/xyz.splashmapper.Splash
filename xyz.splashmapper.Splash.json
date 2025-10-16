@@ -1,7 +1,7 @@
 {
     "app-id": "xyz.splashmapper.Splash",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "23.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "splash.sh",
     "rename-desktop-file": "splash.desktop",
@@ -54,12 +54,14 @@
             "name": "portaudio",
             "buildsystem": "cmake-ninja",
             "builddir": true,
+            "config-opts": [
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+            ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/PortAudio/portaudio.git",
-                    "tag": "pa_stable_v190600_20161030",
-                    "commit": "396fe4b6699ae929d3a685b3ef8a7e97396139a4"
+                    "type": "archive",
+                    "url": "https://files.portaudio.com/archives/pa_stable_v190700_20210406.tgz",
+                    "sha256": "47efbf42c77c19a05d22e627d42873e991ec0c1357219c0d74ce6a2948cb2def"
                 }
             ]
         },
