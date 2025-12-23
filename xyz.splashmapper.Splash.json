@@ -128,6 +128,23 @@
             ]
         },
         {
+            "name": "sh4lt",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [
+                "-DSH4LT_WITH_PYTHON=OFF",
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.com/sh4lt/sh4lt.git",
+                    "tag": "0.2.0",
+                    "commit": "7ee08acb46487885c82262d6699ba04d41f002c8"
+                }
+            ]
+        },
+        {
             "name": "zmq",
             "buildsystem": "cmake-ninja",
             "builddir": true,
