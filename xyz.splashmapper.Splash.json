@@ -116,11 +116,13 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": [
-                "-DWITH_PYTHON=OFF"
+                "-DWITH_PYTHON=OFF",
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.10"
             ],
             "sources": [
                 {
                     "type": "git",
+                    "disable-submodules": true,
                     "url": "https://gitlab.com/sat-mtl/tools/shmdata.git",
                     "tag": "1.3.72",
                     "commit": "96e044d1c6330e5fc9993cda2abc695a1dbc656e"
@@ -133,11 +135,13 @@
             "builddir": true,
             "config-opts": [
                 "-DSH4LT_WITH_PYTHON=OFF",
-                "-DCMAKE_BUILD_TYPE=Release"
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.10"
             ],
             "sources": [
                 {
                     "type": "git",
+                    "disable-submodules": true,
                     "url": "https://gitlab.com/sh4lt/sh4lt.git",
                     "tag": "0.2.0",
                     "commit": "7ee08acb46487885c82262d6699ba04d41f002c8"
@@ -258,10 +262,10 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.11.14/raw/splash.tar.gz?job=package%3Afullsources",
+                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.11.16/raw/splash.tar.gz?job=package%3Afullsources",
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
-                    "sha256": "e1806fa28388b7391eb3b6692331bae795e4d9fa46d2596b09c6f64828613d84"
+                    "sha256": "44227aed63039c64c936e6137670bc843825972773e04967379beb39fafb189a"
                 }
             ]
         },
