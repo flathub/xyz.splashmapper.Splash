@@ -1,47 +1,24 @@
-Flathub
-=======
+# Splash
 
-Flathub is the central place for building and hosting Flatpak builds.
+___Immersive video mapping engine___
 
-Build Splash package
---------------------
+Splash is a video mapping software, dedicated to deploying immersive spaces. Splash takes care of semi-automatically calibrating the videoprojectors (field of view, optical shift, projection blending and color), and feeding them with the input video sources. Calibration relies on a 3D model of the projection surfaces, which allows for matching the real and virtual spaces. Ultimately this can lead for instance to projecting onto mobile objects, or hiding the physical space when used with head tracking. 
 
-To build Splash package manually:
+---
+
+## Manual Install and Run
+
+Make sure you follow the [setup guide for your Linux distribution](https://flathub.org/en/setup) before installing.
 
 ```bash
-# Install dependencies
-sudo apt install -y flatpak-builder
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//23.08
-
-# Build the package
-flatpak-builder --ccache --repo=flatpak_repo build --force-clean xyz.splashmapper.Splash.json
-flatpak build-bundle flatpak_repo splash.flatpak xyz.splashmapper.Splash
-
-# Install it
-flatpak install --user splash.flatpak
+flatpak install flathub xyz.splashmapper.Splash
+flatpak run xyz.splashmapper.Splash
 ```
 
-Using the Flathub repository
-----------------------------
+## Building
 
-To install applications that are hosted on Flathub, use the following:
 ```bash
-flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.gnome.Recipes
+git clone git@github.com:flathub/xyz.splashmapper.Splash.git
+flatpak run org.flatpak.Builder build-dir --user --ccache --force-clean --install xyz.splashmapper.Splash.json
 ```
 
-To install applications from the beta branch, use the following:
-```bash
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
-flatpak install flathub-beta org.godotengine.Godot
-```
-
-For more information and more applications see https://flathub.org
-
-Contributing to Flathub
------------------------
-
-For information on creating packages or reporting issues please see the [contributing page](/CONTRIBUTING.md).
-
-***Note:*** *this repository is not for reporting issues related to the flathub.org website itself or contributing to its development. For that, go to https://github.com/flathub/website*
