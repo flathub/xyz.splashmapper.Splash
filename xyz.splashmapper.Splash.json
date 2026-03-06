@@ -130,25 +130,6 @@
             ]
         },
         {
-            "name": "sh4lt",
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "config-opts": [
-                "-DSH4LT_WITH_PYTHON=OFF",
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_POLICY_VERSION_MINIMUM=3.10"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "disable-submodules": true,
-                    "url": "https://gitlab.com/sh4lt/sh4lt.git",
-                    "tag": "0.2.0",
-                    "commit": "7ee08acb46487885c82262d6699ba04d41f002c8"
-                }
-            ]
-        },
-        {
             "name": "zmq",
             "buildsystem": "cmake-ninja",
             "builddir": true,
@@ -262,10 +243,10 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.11.16/raw/splash.tar.gz?job=package%3Afullsources",
+                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.12.0/raw/splash.tar.gz?job=package%3Afullsources",
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
-                    "sha256": "44227aed63039c64c936e6137670bc843825972773e04967379beb39fafb189a"
+                    "sha256": "3639a0972d95bcd23883d6bdcf155bd42dbacf3a504e8f6db469c765065305cd"
                 }
             ]
         },
