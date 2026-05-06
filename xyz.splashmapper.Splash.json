@@ -32,6 +32,32 @@
     ],
     "modules": [
         {
+            "name": "libasio",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://sourceforge.net/projects/asio/files/asio/1.28.2%20%28Stable%29/asio-1.28.2.tar.bz2",
+                    "sha256": "f1b83e0294f21c1a1972a58c2ac482be32ba5d52caebcc426f019da42ef8e990"
+                }
+            ]
+        },
+        {
+            "name": "websocketpp",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/zaphoyd/websocketpp",
+                    "tag": "0.8.2",
+                    "commit": "56123c87598f8b1dd471be83ca841ceae07f95ba"
+                }
+            ]
+        },
+        {
             "name": "gphoto2",
             "config-opts": [
                 "--disable-static",
@@ -243,10 +269,10 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.12.0/raw/splash.tar.gz?job=package%3Afullsources",
+                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.12.2/raw/splash.tar.gz?job=package%3Afullsources",
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
-                    "sha256": "3639a0972d95bcd23883d6bdcf155bd42dbacf3a504e8f6db469c765065305cd"
+                    "sha256": "85c6d4f9698f2bd0457a44038cba5983dd7d19e5f14244c07c1954ea79c93b85"
                 }
             ]
         },
