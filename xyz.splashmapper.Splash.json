@@ -269,10 +269,10 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.12.2/raw/splash.tar.gz?job=package%3Afullsources",
+                    "url": "https://gitlab.com/splashmapper/splash/-/jobs/artifacts/0.12.4/raw/splash.tar.gz?job=package%3Afullsources",
                     "dest-filename": "splash.tar.gz",
                     "archive-type": "tar-gzip",
-                    "sha256": "85c6d4f9698f2bd0457a44038cba5983dd7d19e5f14244c07c1954ea79c93b85"
+                    "sha256": "1585c8213b62b9a36f4674c70625fa451236cd274a78e043752aeecfa5798726"
                 }
             ]
         },
